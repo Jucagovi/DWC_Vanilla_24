@@ -5,11 +5,11 @@
 /*** Declaración de funciones declaración */
 
 function doblar(num1) {
-  var res = num1 * 2;
-  return `El resultado es ${res}`;
+  let res = num1 * 2;
+  return `El resultado es ${res} y ${res}.`;
 }
 
-console.log(doblar(151));
+//console.log(doblar(151));
 
 /*** Parámetros predeterminados */
 
@@ -17,15 +17,15 @@ console.log(doblar(151));
   return `¡Hola ${persona}!`;
 }
 
-console.log(saludar()); */
+console.log(saludar("Feo")); */
 
 /*** Funciones como parámetro */
 
-/* function alpha(num, fun) {
+function alpha(num, fun) {
   return fun(num);
 }
 
-console.log(alpha(50, doblar)); */
+console.log(alpha(150, doblar));
 
 /*** Hoisting en funciones */
 
@@ -54,19 +54,23 @@ console.log(`El valor de beta es ${beta}`); */
 
 /*** Funciones flecha (usadas como callbacks, no como métodos) */
 
-/* function potencia(num) {
+function potencia(num) {
   return num ** 3;
-} */
+}
+
+let funcionFea = (num) => {
+  return num ** 3;
+};
 
 /*** El pseudoarray (objeto iterable) arguments */
 
-/* function sumarB() {
+function sumarB() {
   var total = 0;
   for (var i = 0; i < arguments.length; i++) {
     total += arguments[i];
   }
   return total;
-} */
+}
 
 /* console.log(sumarB(4, 5, 4, 7)); */
 
@@ -74,7 +78,7 @@ console.log(`El valor de beta es ${beta}`); */
 
 /** Declaración.  */
 
-/* let cosas = new Array();
+let cosas = new Array();
 let tresTipos = new Array(11, "Feo", true);
 let tresTiposDos = [11, "hola", true];
-let masCosas = []; */
+let masCosas = [];
