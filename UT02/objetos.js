@@ -7,9 +7,9 @@
  * */
 
 // Objeto vacío.
-var nadie = {};
+let nadie = {};
 // Objeto con propiedades.
-var persona = {
+let persona = {
   nombre: "Feo",
   apellido1: "De Verdad",
   // Puede haber JSON anidados.
@@ -42,19 +42,19 @@ console.log(persona); */
  * Definición de objetos (métodos)
  * */
 
-/* persona.getNombreCompleto = function () {
+persona.getNombreCompleto = function () {
   return `${this.nombre} ${this.apellido1}`;
 };
 
-console.log(persona);
+/* console.log(persona);
 console.log(persona.getNombreCompleto); // Se imprime por consola el objeto function.
-console.log(persona.getNombreCompleto()); // Se ejecuta la función y se imprime su devolución. */
-
+console.log(persona.getNombreCompleto()); // Se ejecuta la función y se imprime su devolución.
+ */
 /*****************************
  * "Constructores" de objetos.
  * */
 
-/* function creaPersona(nom, ape1) {
+function creaPersona(nom, ape1) {
   return {
     nombre: nom,
     apellido1: ape1,
@@ -78,7 +78,7 @@ console.log(persona.getNombreCompleto()); // Se ejecuta la función y se imprime
     },
   };
 }
-var persona2 = creaPersona("Feo", "De Verdad");
+/* var persona2 = creaPersona("Feo", "De Verdad");
 var persona3 = creaPersona("Bruce", "Wayne");
 console.log(persona2.saluda(persona3)); // Hola Bruce Wayne
 console.log(persona2.saluda({})); // Hola colega */
@@ -112,19 +112,19 @@ console.log(persona2.saluda({})); // Hola colega */
 
 // Se accede al prototipo del objeto JSON para utilizar dos de sus métodos.
 
-/* // Se convierte a texto.
+// Se convierte a texto.
 let textoDesdeJSON = JSON.stringify(persona);
 // Se convierte a JSON.
 let JSONreconstruido = JSON.parse(textoDesdeJSON);
 
-console.log(textoDesdeJSON);
+/* console.log(textoDesdeJSON);
 console.log(JSONreconstruido); */
 
 /*******************************************
  * Desestructuración de objetos (iterables).
  * */
 
-/* let { nombre, apellido1 } = persona;
+let { nombre, apellido1 } = persona;
 
 console.log(nombre);
 console.log(persona);
@@ -135,4 +135,4 @@ let { nombre: nom, apellido1: cognom1, malnom = "Ninguno" } = persona;
 
 console.log(nom);
 console.log(cognom1);
-console.log(malnom); */
+console.log(malnom);
