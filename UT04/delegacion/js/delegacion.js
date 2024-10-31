@@ -21,7 +21,22 @@ window.onload = () => {
     anadirBoton(contenedor);
   });
 
-  anadirEvento(botones);
+  contenedor.addEventListener(
+    "click",
+    (evento) => {
+      if (evento.target.tagName === "BUTTON") {
+        console.log(evento.target);
+      }
+    },
+    false
+  );
+
+  // Se transforma elementos en un Array (de este modo puedo usar map).
+  /*  Array.from(botones).map((boton) => {
+    boton.addEventListener("click", (evento) => {
+      console.log(evento.target);
+    });
+  }); */
 
   /*****************************************************************
    * Los nuevos botones se crean sin evento. ¿Solución?

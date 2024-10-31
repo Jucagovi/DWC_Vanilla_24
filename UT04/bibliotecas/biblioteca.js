@@ -16,10 +16,6 @@ function saludarNombre(feo) {
   console.log(`¡¡¡Hola ${feo}!!!`);
 }
 
-const mostrarEtiqueta = (evento) => {
-  return evento.target.tagName;
-};
-
 /*****************************************
  * Funciones para la sección de "delegacon".
  ***/
@@ -38,11 +34,4 @@ const anadirEvento = (elementos) => {
   });
 };
 
-export {
-  decirAdios,
-  saludar,
-  saludarNombre,
-  anadirBoton,
-  anadirEvento,
-  mostrarEtiqueta,
-};
+export { decirAdios, saludar, saludarNombre, anadirBoton, anadirEvento };
