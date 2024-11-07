@@ -1,5 +1,5 @@
 "use strict";
-import { validarFormulario } from "./biblioteca.js";
+import { validarFormulario } from "../../bibliotecas/biblioteca.js";
 window.onload = () => {
   /* ************** Acceso a un formulario. ************** */
 
