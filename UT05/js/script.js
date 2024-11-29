@@ -30,7 +30,7 @@ window.onload = () => {
 
   // Se simula un retraso a través de setTimeOut().
 
-  /* console.log(`A. Se va a sumar uno a la variable feo = ${feo}.`);
+  /*  console.log(`A. Se va a sumar uno a la variable feo = ${feo}.`);
   setTimeout(() => {
     feo++;
     console.log(`B. Proceso terminado.`);
@@ -42,7 +42,12 @@ window.onload = () => {
    * const promesa = new Promise ( (resolver, rechazar) => { código asíncrono } );
    *
    * Recibe como parámetro dos "return":
-   *    --> resolver (cuando la promesa ha finalizado de forma correcta).
+   *    --> resolver (cuandoconsole.log(`A. Se va a sumar uno a la variable feo = ${feo}.`);
+  setTimeout(() => {
+    feo++;
+    console.log(`B. Proceso terminado.`);
+  }, 1000);
+  console.log(`C. El valor de feo es ${feo}.`); la promesa ha finalizado de forma correcta).
    *    --> rechazar (cuando la promesa ha finalizadp de forma errónea).
    *
    * Estados de una promesa:
@@ -59,14 +64,14 @@ window.onload = () => {
    * Se crea un objeto del tipo promise.
    *  */
 
-  /* const promesa_fea = new Promise((resolver) => {
+  const promesa_fea = new Promise((resolver) => {
     resolver("Hola desde una promesa."); // Ejemplo con código síncrono.
-  }); */
+  });
 
   // Se imprime el objeto de tipo promise.
 
-  /* console.log(promesa_fea); */
-  /* console.log(promesa_fea.value); // undefined --> Hay que consumir esa promesa. */
+  /* console.log(promesa_fea);
+  console.log(promesa_fea.value); // undefined --> Hay que consumir esa promesa. */
 
   // Se consume el contenido del objeto promise.
 
@@ -76,7 +81,7 @@ window.onload = () => {
 
   // *** Arreglando el código con una promise (con resolve) *******************************
 
-  /*  const promesa = new Promise((resolver) => {
+  /* const promesa = new Promise((resolver) => {
     setTimeout(() => {
       feo++;
       console.log(`B. Proceso terminado`);
@@ -92,8 +97,8 @@ window.onload = () => {
   // *** Promesa con resolve y reject ************************************
 
   //feo = `burro`; // Se cambia el valor para que falle.
-
-  /* const promesa = new Promise((resolver, rechazar) => {
+  /* 
+  const promesa = new Promise((resolver, rechazar) => {
     setTimeout(() => {
       if (feo++) {
         console.log(`B. Proceso terminado`);
@@ -149,7 +154,7 @@ window.onload = () => {
       console.log(datos); // Se hace algo con los datos.
     }); */
 
-  /*  fetch(fichero_falso)
+  /* fetch(fichero_falso)
     .then((respuesta) => {
       console.log(respuesta);
       return respuesta.json(); // Esta conversión dará error.
@@ -163,7 +168,7 @@ window.onload = () => {
     }); */
 
   /** Petición a un servidor externo. ********************** */
-  /*  fetch(url)
+  /* fetch(url)
     .then((respuesta) => {
       console.log("Conexión realizada con éxito.");
       console.log(respuesta);
@@ -172,15 +177,15 @@ window.onload = () => {
     })
     .then((datos) => {
       console.log("Mostrando los datos...");
-      console.log(datos);
+      //console.log(datos);
       //console.log(datos.results);
-      //mostrar(datos.results, contenedor);
+      mostrar(datos.results, contenedor);
     }); */
 
   // Otra forma de trabajar con promesas.
   /* fetch(url)
     .then((respuesta) => {
-      return respuesta.text(); // Devuelvo una cadena de texto.
+      return respuesta.json(); // Devuelvo una cadena de texto.
     })
     .then((datos) => {
       console.log(datos);
